@@ -7,6 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 import java.time.Duration;
 
@@ -14,11 +17,16 @@ public class BaseDriver {
     public static WebDriver driver; //Singleton web driver
     public static WebDriverWait wait;
     static {   // public static driverBaslat() // bunun şartı extens olması ve basta yer alması
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    ///Güncelelme uyarısı vermessin diye bu kısmı ekledim.
+
+      Logger logger= Logger.getLogger("");
+      logger.setLevel(Level.SEVERE);
+      driver=new ChromeDriver();
+      driver.manage().window().maximize();
+      driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+      wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
     }
     public static void BekleVeKapat(){
