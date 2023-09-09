@@ -7,17 +7,31 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class US9_POMElements {
-    public US9_POMElements() {
+public class US9_POMElements_EDIT {
+    public US9_POMElements_EDIT() {
         PageFactory.initElements(BaseDriver.driver,this);
     }
 
-    @FindBy(css = "[id='coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension']")
-    public WebElement findPatientRecord;
-    @FindBy(css = "[id='patient-search']")
-    public WebElement searchPatient;/////buraya 100 sayısıı yazdır sonra entera bastır.
-    @FindBy(xpath = "//*[starts-with(text(),'1001')]")
-    public List<WebElement> patients;///burdda 8 tane hasta var rastgele idlerini alın
+    @FindBy(xpath = "//*[contains(@id,'registrationapp')]")
+    public WebElement registerAPatientBtn;
+    @FindBy(css = "[name='givenName']")
+    public WebElement given;
+    @FindBy(css = "[id='next-button']")
+    public WebElement nextBtn;
+    @FindBy(css = "[id='relationship_type']")
+    public WebElement relationshipType;
+    @FindBy(css = "[placeholder='Person Name']")
+    public WebElement personName;
+    @FindBy(css = "[id='submit']")
+    public WebElement confirm;
+    //
+
+
+
+
+
+
+    //birleştirme kısmı
     @FindBy(css = "[href='/openmrs/index.htm']")
     public WebElement homeIcon;/////buraya 100 sayısıı yazdır sonra entera bastır.
     @FindBy(css = "[id='coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension']")
