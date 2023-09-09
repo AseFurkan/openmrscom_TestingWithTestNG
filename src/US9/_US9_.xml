@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuit">
+
+    <test name="Hasta Kayıtlarını Birleştirme (Merge)">
+        <classes>
+            <class name="US9.US9"> </class>
+        </classes>
+    </test>
+
+</suite>
