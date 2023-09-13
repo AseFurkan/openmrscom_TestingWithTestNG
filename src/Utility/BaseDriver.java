@@ -1,5 +1,7 @@
 package Utility;
 
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,35 +9,33 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-import java.time.Duration;
-
 public class BaseDriver {
-    public static WebDriver driver; //Singleton web driver
+
+
+    public static WebDriver driver;
     public static WebDriverWait wait;
-    static {   // public static driverBaslat() // bunun şartı extens olması ve basta yer alması
 
-    ///Güncelelme uyarısı vermessin diye bu kısmı ekledim.
+    @BeforeClass
+    public void baslangicIslemleri() {
+        Logger logger = Logger.getLogger("");
+        logger.setLevel(Level.SEVERE);
 
-      Logger logger= Logger.getLogger("");
-      logger.setLevel(Level.SEVERE);
-      driver=new ChromeDriver();
-      driver.manage().window().maximize();
-      driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-      wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-    }
-    public static void BekleVeKapat(){
-        MyFunc.bekle(3);
-        driver.quit();
+        driver = new ChromeDriver();
+        //driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
     }
 
-    public void login(){
+    public void login() {
 
         driver.get("https://openmrs.org");
 
@@ -65,6 +65,14 @@ public class BaseDriver {
         login.click();
 
         Assert.assertTrue(driver.getCurrentUrl().equals("https://demo.openmrs.org/openmrs/referenceapplication/home.page"), "Yanlık kullanıcı adı veya şifre");
-
     }
+
+
+    @AfterClass
+    public void bitisIslemleri() {
+        MyFunc.bekle(5);
+        driver.quit();
+    }
+
+
 }

@@ -29,7 +29,7 @@ public class US10 extends BaseDriver {
         MyFunc.bekle(2);
 
 
-        BekleVeKapat();
+
 
     }
 }

@@ -1,6 +1,7 @@
 package US9;
 
-import Utility.BaseDriver;
+
+import Utility.BaseDriverParameter;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +12,7 @@ import java.util.HashSet;
 import java.util.List;
 
 
-public class US9 extends BaseDriver {
+public class US9 extends BaseDriverParameter {
 
     @Test
     public void TC_0909(){
@@ -52,11 +53,12 @@ public class US9 extends BaseDriver {
         for (WebElement e:elements.ids) {
             patients.add(e.getText());
         }
+
         boolean control=!(patients.add(rndPatient1)&&patients.add(rndPatient2));
         _softAssert.assertTrue(control,"Birleştirilen idler uyumsuzdur.");
 
         _softAssert.assertAll();
-        BekleVeKapat();
+
 
         }
 

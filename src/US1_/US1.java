@@ -42,7 +42,7 @@ public class US1 extends BaseDriver {
 
         Assert.assertFalse(driver.getCurrentUrl().equals("https://demo.openmrs.org/openmrs/referenceapplication/home.page"), "Yanlık kullanıcı adı veya şifre");
 
-        BekleVeKapat();
+
     }
 
 }

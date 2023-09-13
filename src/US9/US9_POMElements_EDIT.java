@@ -24,7 +24,7 @@ public class US9_POMElements_EDIT {
     public WebElement personName;
     @FindBy(css = "[id='submit']")
     public WebElement confirm;
-    //
+
 
 
 
@@ -32,8 +32,8 @@ public class US9_POMElements_EDIT {
 
 
     //birleştirme kısmı
-    @FindBy(css = "[href='/openmrs/index.htm']")
-    public WebElement homeIcon;/////buraya 100 sayısıı yazdır sonra entera bastır.
+    @FindBy(css = "[class='logo']")
+    public WebElement logo;/////buraya 100 sayısıı yazdır sonra entera bastır.
     @FindBy(css = "[id='coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension']")
     public WebElement dataManagement;///data management
     @FindBy(css = "[id='coreapps-mergePatientsHomepageLink-app']")
