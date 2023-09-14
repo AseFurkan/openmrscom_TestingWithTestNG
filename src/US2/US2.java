@@ -13,6 +13,6 @@ public class US2 extends BaseDriver {
     public void Test2(){
         login(); // Base driver içinde
 
-        BekleVeKapat();
+
     }
 }
