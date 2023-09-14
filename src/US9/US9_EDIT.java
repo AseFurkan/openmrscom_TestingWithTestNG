@@ -1,22 +1,19 @@
 package US9;
 
-import Utility.BaseDriver;
+
 import Utility.BaseDriverParameter;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 
-public class US9_EDIT extends BaseDriver {
+public class US9_EDIT extends BaseDriverParameter {
 
 
     @Test

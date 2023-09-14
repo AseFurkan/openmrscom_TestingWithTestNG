@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuit">
+
+    <test name="test10">
+        <parameter name="browserTipi" value="chrome"></parameter>
+        <classes>
+            <class name="US10.US10"></class>
+        </classes>
+    </test>
+
+    <test name="test10">
+        <parameter name="browserTipi" value="edge"></parameter>
+        <classes>
+            <class name="US10.US10"></class>
+        </classes>
+    </test>
+
+</suite>
