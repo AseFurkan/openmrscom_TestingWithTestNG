@@ -19,6 +19,6 @@ public class US3 extends BaseDriver {
 
         Assert.assertTrue(driver.getCurrentUrl().equals("https://demo.openmrs.org/openmrs/login.htm"),"Hatalı işlem login sayfasına yönlendirilemedi");
 
-        BekleVeKapat();
+
     }
 }

@@ -71,7 +71,7 @@ public class US7 extends BaseDriver {
         confirmRight.click();
         MyFunc.bekle(2);
 
-        BekleVeKapat();
+
 
 
 

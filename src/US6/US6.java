@@ -76,7 +76,7 @@ public class US6 extends BaseDriver {
 
 
 
-        BekleVeKapat();
+
 
 
 
