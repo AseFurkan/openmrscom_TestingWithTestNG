@@ -110,10 +110,8 @@ public class US4 extends BaseDriver {
         WebElement id = driver.findElement(By.xpath("//*[@class='float-sm-right']"));
         WebElement patientName = driver.findElement(By.xpath("//*[@class='labeled']"));
 
-     // Assert.assertTrue("Hatalı işlem Yaptınız", id.isDisplayed());
-     // Assert.assertTrue("Hatalı işlem Yaptınız", patientName.isDisplayed());
-
-
+      Assert.assertTrue(id.isDisplayed());
+      Assert.assertTrue(patientName.isDisplayed());
 
     }
 
