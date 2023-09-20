@@ -10,7 +10,7 @@ import java.util.List;
 
 public class US5 extends BaseDriver {
     @Test
-    public void test1() {
+    public void test5() {
         login();
 
         Actions aksiyonlar = new Actions(driver);
